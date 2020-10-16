@@ -6,6 +6,10 @@
 #include <metal/timer.h>
 #include <metal/interrupt.h>
 
+#ifndef METAL_WAIT_CYCLE
+#define METAL_WAIT_CYCLE 5000
+#endif
+
 int sw_status = 99;
 
 void metal_riscv_cpu_intc_msip_handler() {
